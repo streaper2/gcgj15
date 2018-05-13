@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Répertoire</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+  <ion-list >
+    <button ion-item *ngFor="let contact of contacts"> {{contact.name | uppercase  }}  {{contact.Surname | capitalize}} </button>
+  </ion-list>
+  
+  <ion-fab right bottom >
+    <button ion-fab (click)= "addContact()" >
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>
